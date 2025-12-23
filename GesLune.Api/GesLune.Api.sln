@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36811.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GesLune.Api", "GesLune.Api.csproj", "{0F343ACB-2D9B-44BF-9211-D98C7456782D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F343ACB-2D9B-44BF-9211-D98C7456782D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F343ACB-2D9B-44BF-9211-D98C7456782D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F343ACB-2D9B-44BF-9211-D98C7456782D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F343ACB-2D9B-44BF-9211-D98C7456782D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02E62D17-F892-4392-8650-5EE80A3EDAD1}
+	EndGlobalSection
+EndGlobal

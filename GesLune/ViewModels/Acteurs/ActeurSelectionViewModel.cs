@@ -1,0 +1,42 @@
+﻿using GesLune.Commands;
+using GesLune.Models;
+using GesLune.Repositories;
+using GesLune.Windows.Acteurs;
+
+namespace GesLune.ViewModels.Acteurs
+{
+    public class ActeurSelectionViewModel : ViewModelBase
+    {
+        public IEnumerable<Model_Acteur> Acteurs { get; set; } = [];
+        public NavigationCommand SaisieNavigationCommand { get; private set; }
+        private readonly int Acteur_Type_Id;
+        public ActeurSelectionViewModel(int Acteur_Type_Id)
+        {
+            this.Acteur_Type_Id = Acteur_Type_Id;
+            LoadData();
+            SaisieNavigationCommand = new(SaisieNavigate, CanSaisieNavigate);
+        }
+        private bool CanSaisieNavigate(object? obj) => true;
+
+        private void SaisieNavigate(object? obj)
+        {
+            Model_Acteur model = 
+                new()
+                {
+                    Acteur_Type_Id = this.Acteur_Type_Id,
+                };
+            ActeurSaisieWindow saisieWindow = new(model);
+            saisieWindow.ShowDialog();
+            LoadData();
+        }
+
+        private async void LoadData()
+        {
+            if (Acteur_Type_Id == 0)
+                Acteurs = await ActeurRepository.GetAll();
+            else
+                Acteurs = await ActeurRepository.GetByTypeId(Acteur_Type_Id);
+            OnPropertyChanged(nameof(Acteurs));
+        }
+    }
+}

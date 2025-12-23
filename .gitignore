@@ -1,0 +1,281 @@
+# ?? GesLune 2.0 - Security & Build Artifacts
+
+# ========================================
+# ?? SENSITIVE FILES (NEVER COMMIT)
+# ========================================
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+*.env
+
+# Configuration files with credentials
+appsettings.json
+appsettings.*.json
+!appsettings.Example.json
+
+# User-specific Visual Studio settings
+*.user
+*.suo
+*.userprefs
+
+# Azure-specific secrets
+azure.json
+function.json
+
+# Connection strings and API keys
+secrets.json
+launchSettings.json
+
+# ========================================
+# ?? BUILD & COMPILATION OUTPUT
+# ========================================
+
+# C# and .NET build artifacts
+bin/
+obj/
+out/
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+
+# MSBuild output directories
+!**/packages/build/
+*.log
+*.appxupload
+*.appx
+*.appxbundle
+*.msappx
+*.msix
+*.msixbundle
+*.appxsym
+
+# ========================================
+# ?? VISUAL STUDIO FILES
+# ========================================
+
+# IDE directories and files
+.vs/
+.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# Rider IDE
+.idea/
+.idea/
+*.sln.iml
+
+# Visual Studio Code settings
+.vs/
+.vscode/
+
+# ========================================
+# ?? NUGET & PACKAGE MANAGEMENT
+# ========================================
+
+# NuGet packages
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+.packages/
+!packages/build/
+
+# Package lock files (optional, for reproducibility)
+# package-lock.json
+# yarn.lock
+
+# ========================================
+# ??? RUNTIME & TEMPORARY FILES
+# ========================================
+
+# DLL and executable files (except in specific directories)
+*.dll
+*.exe
+*.so
+*.dylib
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.swo
+*~
+
+# Publish output
+PublishProfiles/
+*.PublishSettings
+*.pubxml
+*.publishproj
+publish/
+
+# ========================================
+# ??? DATABASE FILES
+# ========================================
+
+# Local database files
+*.mdf
+*.ldf
+*.ndf
+*.mdb
+*.db-journal
+
+# SQL Server files
+*.sql
+!DB Scripts/*.sql
+App_Data/
+
+# ========================================
+# ?? TESTING & COVERAGE
+# ========================================
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+.coveragexml
+coverage/
+*.xUnit.results.xml
+
+# OpenCover reports
+opencoverage/
+
+# ========================================
+# ?? TOOL-SPECIFIC DIRECTORIES
+# ========================================
+
+# ReSharper/JetBrains Rider
+.resharper
+.resharper.*
+_ReSharper*/
+*.DotSettings.user
+
+# StyleCop
+StyleCopReport.html
+
+# ReSpeller
+*.spelling
+
+# BizTalk
+*.btp.cs
+*.btproj.cs
+*.odx.cs
+*.xsd.cs
+
+# ========================================
+# ?? PLATFORM-SPECIFIC
+# ========================================
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+.AppleDouble
+.LSOverride
+
+# ========================================
+# ?? WEB & DEPLOYMENT
+# ========================================
+
+# IIS/Web Server files
+App_Data/
+.Publish.xml
+.Publish.*.xml
+artifacts/
+.deployed
+PublishProfiles/
+website/
+
+# FTP/S3
+.ftpconfig
+.s3credentials
+
+# ========================================
+# ?? MISCELLANEOUS
+# ========================================
+
+# Logging
+logs/
+logs/*.log
+*.log
+*.log.*
+
+# Profiling data
+*.dgml
+
+# User files
+*.user
+*.suo
+.VisualStudio.cache
+
+# Node modules (if using any npm packages)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# ========================================
+# ?? SPECIFIC TO GESLUNE
+# ========================================
+
+# Local development environment files
+.env
+.env.local
+appsettings.Development.json
+
+# Azure deployment files (keep generic structure, don't commit specific deployments)
+PublishProfiles/
+ServiceDependencies/
+
+# Database backup files
+*.bak
+*.backup
+*.sql.bak
+
+# WPF-specific
+GesLune/bin/
+GesLune/obj/
+GesLune/.vs/
+
+# API-specific
+GesLune.Api/bin/
+GesLune.Api/obj/
+GesLune.Api/.vs/
+GesLune.Api/publish/
+
+# ========================================
+# ?? IMPORTANT EXCEPTIONS (WHITELIST)
+# ========================================
+
+# DO NOT IGNORE these files
+!.gitkeep
+!.gitattributes
+!.github/
+!.github/**/*
+!README.md
+!CHANGELOG.md
+!LICENSE
+!.editorconfig
+!.gitignore
+!.dockerignore
+!DB Scripts/
+!DB Scripts/**/*.sql
